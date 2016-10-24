@@ -3,19 +3,19 @@
 # # # # # # # # # # # # #
 
 # Basic
-name:               "Kiko Plus"
+name:               "AYuan Blog"
 
 
 
 author:
-  name:             your-name
-  facebook:         your-id
-  twitter:          your-id
-  github:           your-id
-  linkedin:         your-id
-  medium:           your-id
-  tumblr:           your-id
-  email:            your-id@your-email.com
+  name:             AYuan
+  facebook:         AYuan
+  twitter:          AYuan
+  github:           AAYuan
+  linkedin:         AYuan
+  medium:           
+  tumblr:           
+  email:            ayuan_lty@outlook.com
 
 # Google-analytics
 google-analytics:
@@ -26,13 +26,13 @@ disqus:
   id:               "your-id"
 
 # URL
-#url:                "https://AWEEKJ.github.io" # the base hostname & protocol for your site
-url:                "http://localhost:4000" # use this url when develop
-baseurl:            "" # the subpath of your site, e.g. /blog
+#url:                "https://AAYuan.github.io" # the base hostname & protocol for your site
+url:                "http://AAYuan.github.io" # use this url when develop
+baseurl:            "/AYuan.github.io" # the subpath of your site, e.
 
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:           Asia/Seoul
+timezone:           Asia/Beijing
 permalink:          /:year-:month-:day/:title/
 
 # Pagination
@@ -53,7 +53,7 @@ nav:
   - name:           "Tags"
     url:            "/tags"
   - name:           "Github"
-    url:            "https://github.com/AWEEKJ/Kiko-plus"
+    url:            "https://github.com/AAYuan"
 
 
 
