@@ -1,122 +1,60 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
+{% include header.html %}
 
-<head>
-<title>AYuan Profile Responsive Widget Template  :: w3layouts</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="AYuan Profile Widget Tab Form,Login Forms,Sign up Forms,Registration Forms,News letter Forms,Elements"/>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-		$('#horizontalTab').easyResponsiveTabs({
-		type: 'default',
-		width: 'auto',
-		fit: true
-			});
-		});
-	</script>
-	
+<div class="list">
+{% if site.posts.size == 0 %}
+  <h2>No post found</h2>
+{% else %}
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  <div class="list-post">
+    {% if post.link %}
+    <a href="{{ post.link }}">
+    {% else %}
+    <a href="{{ post.url | prepend: site.baseurl }}">
+    {% endif %}  
+      <div class="list-post-date">
+        <time>{{ post.date | date_to_string }}</time>
+      </div>
+      <div class="list-post-title">
+        {{ post.title }}
+      </div>
+      {% if post.description %}
+      <div class="list-post-desc">
+        {{ post.description }}
+      </div>
+      {% endif %}
+    </a>
 
-</head>
 
-<body>
-	<div class="main">
-	<h1> AYuan Profile Widget </h1>
-	
-		<div class="container">
-			
-			<div class="profile">
-			  <div class="pro-padding">
-				<div class="image">
-					<img src="./images/p6.jpg" alt="profile img">
-				</div>
-				
-				<h3> AYuan Ipsum </h3>
-				<a href="mailto:example@mail.com"> <p> ayuan_lty@outlook.com </p>	</a>
-			  </div>
-			</div>
-			
-						
-			<div class="tab"> 
-			
-				<div class="sap_tabs">	
-		 
-					<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-		 
-						<ul>
-							<li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>ABOUT</span></li>
-							<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>PHOTOS</span></li>
-							<li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>CONTACT</span></li>
-				  
-						</ul>		
-						<!---->
+  </div>
+{% endfor %}
+  <!-- Pagination links -->
+  <div class="list-pagination">
+    <span class="list-pagination-previous">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+          Previous
+        </a>
+      {% else %}
 
-<!-- Tab - 1 -->   			<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-								<div class="facts">
-									<!--About-->
-									<div class="about">
-										<p> AYuan is a student hahahhahahahahhahahahhahahahahah
-											hahahahahahaahhahahahhdsfhsjdkfdsjf.
-										</p>
-										<p> AYuan is an engineer hahahhahahahahhahahahhahahahahah
-											hahahahahahaahhahahahhdsfhsjdkfdsjf.
-										</p>
-									</div>
-								</div>
-							</div>
-				
+      {% endif %}
+    </span>
 
-<!-- Tab - 2 -->			<div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
-								<div class="facts">
-									<div class="photo">
-										<ul>
-											<li>	<img src="./images/p1.jpg" alt="image">	</li>
-											<li>	<img src="./images/p2.jpg" alt="image">	</li>
-											<li>	<img src="./images/p3.jpg" alt="image">	</li>
-											<li>	<img src="./images/p4.jpg" alt="image">	</li>
-											<li>	<img src="./images/p5.jpg" alt="image">	</li>
-											<li>	<img src="./images/p6.jpg" alt="image">	</li>
-										</ul>
-									</div>
-								</div> 
-							</div>
+    <span class="list-pagination-next">
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">
+          Next
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </a>
+      {% else %}
 
-							
-<!-- Tab - 3 -->			<div class="tab-3 resp-tab-content" aria-labelledby="tab_item-2">
-								<div class="facts">
-									<div class="contact">
-										<ul>
-											<li> Bei Jing  </li>
-											<li> 1995-Aarhus </li>
-											<li> 海淀 </l>
-											<li> ayuan_lty@outlook.com </li>
-										</ul>
-									</div>
-								</div> 
-							</div>
-			 	
-					</div>	
-				</div>
-			</div> <!-- tab Ends here -->
-			
-			
-		
-		</div> <!-- Container Ends here -->
-		
-		<div class="clear"> </div>
-		
-		
-		
-	</div> <!-- main Ends here -->
-	
-	
-		<div class="footer">
-			<p>© 2016 AYuan Profile Widget. All Rights Reserved | Template by <a href="https://www.baidu.com/" target="_blank">AYuan</a></p>
-		</div>
-	
-</body>
-</html>
+      {% endif %}
+    </span>
+
+  </div>
+{% endif %}
+</div>
