@@ -1,4 +1,5 @@
 
+
 #Objective-C runtime 00-概述
 
 OBjective-C是一门动态语言，将许多静态语言在编译和链接时期做的事情放到了运行时来处理，归于他的运行时系统Objc Runtime。Objc Runtime是一个用C和汇编写的库，使C语言具有面向对象的能力。
@@ -26,7 +27,7 @@ void funcB()
 
 对于动态语言，比如Objective-C的下面代码，使用runtime进行方法交换之后，运行时调用funcA，确执行的是funcB
 
-```
+```c
 - (void)test {
 	[self funcA]; //输出funcA
 	//方法交换
