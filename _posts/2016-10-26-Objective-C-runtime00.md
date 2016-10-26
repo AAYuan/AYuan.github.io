@@ -1,6 +1,8 @@
 
 #Objective-C runtime 00-概述
+
 OBjective-C是一门动态语言，将许多静态语言在编译和链接时期做的事情放到了运行时来处理，归于他的运行时系统Objc Runtime。Objc Runtime是一个用C和汇编写的库，使C语言具有面向对象的能力。
+
 ##动态语言的效果
 对于静态语言，下面有一段C语言的代码，在main函数中先执行funA再执行funB,编译链接完成之后执行顺序就固定了。
 
