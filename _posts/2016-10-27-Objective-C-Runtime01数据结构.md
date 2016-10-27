@@ -142,7 +142,7 @@ private:
 meta-class也是一个类，所以也可以向它发送消息，为了不让这种结构无线延伸下去，Objective-C的设计者让meta-class的isa指向父类的meta-class，作为他们的附属类。所有在NSObject继承体系下的meta-class，都在NSObject的meta-class附属下，而meta-class的isa指向他自己，形成了一个闭环。
 结构如下图：
 
-![1475472-70ff45d63765663](media/14682778572700/1475472-70ff45d63765663c.png)
+![1475472-70ff45d63765663](http://upload-images.jianshu.io/upload_images/1475472-70ff45d63765663c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
