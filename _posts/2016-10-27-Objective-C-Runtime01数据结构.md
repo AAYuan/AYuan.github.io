@@ -42,6 +42,7 @@ struct objc_class {
 ```c
 typedef struct objc_object *id;
 ```
+
 ## metaClass 
 
 OC种所有的类也是对象，我们可以向这个对象发送消息（调用类方法）。比如：
