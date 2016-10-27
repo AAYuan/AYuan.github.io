@@ -4,13 +4,13 @@
 
 Objective-C类是由Class类型来表示的，Class是一个指向objc_class结构体的指针。
 
-```objc
+```
 typedef struct objc_class *Class;
 ```
 
 `objc/runtime.h` 中`objc_class`结构体如下
 
-```objc
+```c
 struct objc_class {
     Class isa  OBJC_ISA_AVAILABILITY;
 
@@ -39,20 +39,20 @@ struct objc_class {
 
 常见的一个id，是一个objc_object结构类型的指针，塔可以让我们实现类似于C++的泛型的一些操作。该类型的对象可以转换为任意类型的对象。
 
-```objc
+```c
 typedef struct objc_object *id;
 ```
 ##metaClass
 
 OC种所有的类也是对象，我们可以向这个对象发送消息（调用类方法）。比如：
 
-```objc
+```c
 [NSArray array];
 ```
 
 既然是对象，就是一个objc_object指针，它包含一个指向其类isa的一个指针。
 
-```objc
+```c
 struct objc_object {
 private:
     isa_t isa;
@@ -79,13 +79,13 @@ meta-class也是一个类，所以也可以向它发送消息，为了不让这�
 
 Objective-C类是由Class类型来表示的，Class是一个指向objc_class结构体的指针。
 
-```objc
+```c
 typedef struct objc_class *Class;
 ```
 
 `objc/runtime.h` 中`objc_class`结构体如下
 
-```objc
+```c
 struct objc_class {
     Class isa  OBJC_ISA_AVAILABILITY;
 
@@ -114,20 +114,20 @@ struct objc_class {
 
 常见的一个id，是一个objc_object结构类型的指针，塔可以让我们实现类似于C++的泛型的一些操作。该类型的对象可以转换为任意类型的对象。
 
-```objc
+```c
 typedef struct objc_object *id;
 ```
 ##metaClass
 
 OC种所有的类也是对象，我们可以向这个对象发送消息（调用类方法）。比如：
 
-```objc
+```c
 [NSArray array];
 ```
 
 既然是对象，就是一个objc_object指针，它包含一个指向其类isa的一个指针。
 
-```objc
+```c
 struct objc_object {
 private:
     isa_t isa;
